@@ -4,7 +4,7 @@ const fs = require("fs");
 
 const testCases = sample.testCases;
 
-const linkSynonyms = (dict) => {
+export const linkSynonyms = (dict) => {
   let memo = [];
   for (let i = 0; i <= dict.length; i++) {
     const pair = dict[i];
@@ -57,7 +57,7 @@ const linkSynonyms = (dict) => {
   return memo;
 };
 
-const compareSynonyms = (memo, queries) => {
+export const compareSynonyms = (memo, queries) => {
   let result = Array(100).fill("different");
   queries.map((query, o) => {
     const left = query[0].toLowerCase();
@@ -83,17 +83,17 @@ const compareSynonyms = (memo, queries) => {
   return result;
 };
 
-const sampleResults = testCases.map((cases, i) => {
-  const { dictionary, queries } = cases;
+// const sampleResults = testCases.map((cases, i) => {
+//   const { dictionary, queries } = cases;
 
-  const result = compareSynonyms(linkSynonyms(dictionary), queries);
+//   const result = compareSynonyms(linkSynonyms(dictionary), queries);
 
-  return { [`case${i}`]: result };
-});
+//   return { [`case${i}`]: result };
+// });
 
-fs.writeFile("result.txt", JSON.stringify(sampleResults), (err) => {
-  if (err) {
-    console.error(err);
-    return;
-  }
-});
+// fs.writeFile("result.txt", JSON.stringify(sampleResults), (err) => {
+//   if (err) {
+//     console.error(err);
+//     return;
+//   }
+// });
