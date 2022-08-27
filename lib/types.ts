@@ -1,6 +1,6 @@
 export type WordPair = string[];
 
-export type MapWordToSimilarsIndex = Record<string, [number?]>;
+export type MapWordToSimilarsIndex = Record<string, [string]>;
 
 export type RecursiveGroupSimilarsReturn =
   | RecursiveGroupSimilars
