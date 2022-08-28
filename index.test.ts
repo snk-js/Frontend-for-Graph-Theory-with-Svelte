@@ -1,7 +1,7 @@
 import { describe, it } from "@jest/globals";
 import { first } from "./lib/samples_values";
-import { group_indexes_by_synonym } from "./lib/synonyms_indexes";
-import { search_synonym } from "./lib/synonym_graph";
+import { build_connected_graph_structure } from "./lib/nodes";
+import { search_synonym } from "./lib/traverse_graph";
 
 const first_case = first.dictionary;
 const first_query = first.queries;
@@ -23,7 +23,7 @@ describe("link synonyms", () => {
       ["UNdErdoG", "magiC"],
     ];
 
-    const test = group_indexes_by_synonym(first_case);
+    const test = build_connected_graph_structure(first_case);
     const first_sample_case_result = {
       magic: ["watch", "underdog"],
       watch: ["magic", "manager"],

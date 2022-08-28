@@ -4,10 +4,10 @@ import { MapWordToSimilarsIndex } from "./types";
 export const flat_dict = (dict: WordPair[]): string[] =>
   dict.flat().map((a) => a.toLocaleLowerCase());
 
-export const group_indexes_by_synonym = (dict: WordPair[]) =>
-  similar_indexes(flat_dict(dict));
+export const build_connected_graph_structure = (dict: WordPair[]) =>
+  link_nodes(flat_dict(dict));
 
-const similar_indexes = (
+const link_nodes = (
   list_words: string[],
   memo: MapWordToSimilarsIndex = {},
   groups = [],
@@ -19,5 +19,5 @@ const similar_indexes = (
   word &&
     ((memo[word] && memo[word].push(adjacent_word)) ||
       (memo[word] = [adjacent_word]));
-  return similar_indexes(list_words, memo, groups, (i += 1));
+  return link_nodes(list_words, memo, groups, (i += 1));
 };
