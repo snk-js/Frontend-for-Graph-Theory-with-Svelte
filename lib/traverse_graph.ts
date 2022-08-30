@@ -9,8 +9,9 @@ export const search_synonym = (dict: WordPair[], queries: WordPair[]) => {
   const traverse_graph = (vertices: MapWordToSimilarsIndex, words: string[]) =>
     depth_first_search(vertices, words);
 
-  const ok = traverse_graph(vertices, ["uniform", "manager"]);
+  const ok = traverse_graph(vertices, ["ability", "manager"]);
   console.log(ok);
+  // console.log(ok);
   // const result = queries.map((query) => {
   //   console.log({ vertices });
 
@@ -23,44 +24,59 @@ export const search_synonym = (dict: WordPair[], queries: WordPair[]) => {
   // console.log(result);
 };
 
-const depth_first_search: any = (
-  vertices: MapWordToSimilarsIndex,
-  path: string[],
-  // where I am
-  actual?: string,
-  // where I was
-  last?: string,
-  // where I will go in case of facing no more roads
-  go_back: Array<string | undefined> = [],
-  // index
-  i: number = 0
-) => {
-  const [start, target] = path;
-
-  console.log(i, { actual, last }, { go_back });
-
-  if (target === actual) return "synonym";
-  if (i === 0) actual = start;
-
-  if (!actual) return "different";
-  const edges = vertices[actual];
-
-  if (!edges[0])
-    return depth_first_search(
-      vertices,
-      path,
-      go_back.shift(),
-      actual,
-      go_back,
-      i + 1
-    );
-
-  // -----------------------------------------
-  const next = edges.shift();
-  while (edges.length > 0 && edges[0]) go_back.push(edges.shift());
-
-  return depth_first_search(vertices, path, next, actual, go_back, i + 1);
+const depth_first_search: any = () => {
+  // verify neighbors
 };
+
+// const depth_first_search: any = (
+//   vertices: MapWordToSimilarsIndex,
+//   path: string[],
+//   // where I am
+//   actual?: string,
+//   // where I was
+//   last?: string,
+//   // where I will go in case of facing no more roads
+//   go_back: Array<string | undefined> = [],
+//   // index
+//   i: number = 0
+// ) => {
+//   console.log(i, { go_back }, "\n", { actual }, "\n", { last }, "\n", {
+//     vertices,
+//   });
+//   const [start, target] = path;
+//   if (target === actual) return "synonym";
+//   if (i === 0) actual = start;
+//   if (!actual) {
+//     return depth_first_search(
+//       vertices,
+//       path,
+//       go_back.shift(),
+//       last,
+//       go_back,
+//       i + 1
+//     );
+//   }
+//   const edges = vertices[actual];
+//   if (last === edges[0] && edges.shift()) {
+//     return depth_first_search(
+//       vertices,
+//       path,
+//       edges.shift(),
+//       actual,
+//       go_back,
+//       i + 1
+//     );
+//   }
+
+//   // -----------------------------------------
+//   const next = edges.shift();
+
+//   if (edges.length > 0 && edges[0]) {
+//     go_back.push(edges.shift());
+//   }
+
+//   return depth_first_search(vertices, path, next, actual, go_back, i + 1);
+// };
 
 // const depth_first_search: any = (
 //   vertices: MapWordToSimilarsIndex,
