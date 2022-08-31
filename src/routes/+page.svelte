@@ -1,8 +1,11 @@
 <script>
-    import G from '$lib/graph'
     import Node  from '../components/Node.svelte'
+    import { build_graph } from '$lib/graph'
+    import { first } from '$lib/samples_values'
 
-    console.log(G)
+    const G = build_graph(first.dictionary)
+
+    console.log(G, 'lol', 'lol')
 </script>
     
 <div class='container'>
