@@ -1,6 +1,8 @@
 <script>
     import G from '$lib/graph'
     import Node  from '../components/Node.svelte'
+
+    console.log(G)
 </script>
     
 <div class='container'>

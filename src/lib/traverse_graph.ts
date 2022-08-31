@@ -1,12 +1,14 @@
-import { build_connected_graph_structure, flat_dict } from "./nodes";
-import type { WordPair, MapWordToSimilarsIndex } from "./types";
+import {
+  build_word_adjency_list,
+  flat_dict,
+} from "./adjency_list_from_edge_set";
+import type { WordPair, WordAdjencyList } from "./types";
 
 export const search_synonym = (dict: WordPair[], queries: WordPair[]) => {
-  const vertices: MapWordToSimilarsIndex =
-    build_connected_graph_structure(dict);
+  const vertices: WordAdjencyList = build_word_adjency_list(dict);
 
   return vertices;
-  // const traverse_graph = (vertices: MapWordToSimilarsIndex, words: string[]) =>
+  // const traverse_graph = (vertices: WordAdjencyList, words: string[]) =>
   //   depth_first_search(vertices, words);
 
   // const ok = traverse_graph(vertices, ["ability", "manager"]);
@@ -29,7 +31,7 @@ export const search_synonym = (dict: WordPair[], queries: WordPair[]) => {
 // };
 
 // const depth_first_search: any = (
-//   vertices: MapWordToSimilarsIndex,
+//   vertices: WordAdjencyList,
 //   path: string[],
 //   // where I am
 //   actual?: string,
@@ -79,7 +81,7 @@ export const search_synonym = (dict: WordPair[], queries: WordPair[]) => {
 // };
 
 // const depth_first_search: any = (
-//   vertices: MapWordToSimilarsIndex,
+//   vertices: WordAdjencyList,
 //   words: string[],
 //   edge?: string,
 //   last_vertice?: string,

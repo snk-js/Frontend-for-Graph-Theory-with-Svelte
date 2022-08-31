@@ -1,23 +1,25 @@
 export type WordPair = string[];
 
-export type MapWordToSimilarsIndex = Record<string, [string]>;
+export type MapWordIndexes = Record<string, number>;
+
+export type WordAdjencyList = Record<string, [string]>;
 
 export type RecursiveGroupSimilarsReturn =
   | RecursiveGroupSimilars
-  | MapWordToSimilarsIndex;
+  | WordAdjencyList;
 
 export type FlatDict = string[];
 
 export type RecursiveGroupSimilarsParams = [
   list_words: string[],
-  memo?: MapWordToSimilarsIndex,
+  memo?: WordAdjencyList,
   group?: WordPair[],
   i?: number
 ];
 
 export type RecursiveGroupSimilars = (
   ...args: RecursiveGroupSimilarsParams
-) => MapWordToSimilarsIndex | RecursiveGroupSimilarsParams;
+) => WordAdjencyList | RecursiveGroupSimilarsParams;
 
 export type ICase = {
   dictionary: WordPair[];
