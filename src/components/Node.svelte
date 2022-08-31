@@ -8,10 +8,9 @@
 
 <style>
     .node {
-        width: 50px;
-        height: 50px;
-        margin: 2rem;
-        background: pink;
+        width: 25px;
+        height: 25px;
+        background: #eb3434;
         border-radius: 50%;
     }
 
