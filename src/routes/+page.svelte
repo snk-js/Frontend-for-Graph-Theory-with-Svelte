@@ -1,2 +1,19 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+    import G from '$lib/graph'
+    import Node  from '../components/Node.svelte'
+</script>
+    
+<div class='container'>
+    {#each G.getNodes() as { id, index, neighbors, visited, setVisited }, i}
+
+		<Node />
+
+	{/each}
+</div>
+
+
+
+<style>
+
+
+</style>

@@ -1,32 +1,32 @@
-import { start } from "repl";
 import { build_connected_graph_structure, flat_dict } from "./nodes";
-import { WordPair, MapWordToSimilarsIndex } from "./types";
+import type { WordPair, MapWordToSimilarsIndex } from "./types";
 
 export const search_synonym = (dict: WordPair[], queries: WordPair[]) => {
   const vertices: MapWordToSimilarsIndex =
     build_connected_graph_structure(dict);
 
-  const traverse_graph = (vertices: MapWordToSimilarsIndex, words: string[]) =>
-    depth_first_search(vertices, words);
+  return vertices;
+  // const traverse_graph = (vertices: MapWordToSimilarsIndex, words: string[]) =>
+  //   depth_first_search(vertices, words);
 
-  const ok = traverse_graph(vertices, ["ability", "manager"]);
-  console.log(ok);
+  // const ok = traverse_graph(vertices, ["ability", "manager"]);
   // console.log(ok);
-  // const result = queries.map((query) => {
-  //   console.log({ vertices });
+  // // console.log(ok);
+  // // const result = queries.map((query) => {
+  // //   console.log({ vertices });
 
-  //   return traverse_graph(
-  //     vertices,
-  //     query.map((a) => a.toLocaleLowerCase())
-  //   );
-  // });
+  // //   return traverse_graph(
+  // //     vertices,
+  // //     query.map((a) => a.toLocaleLowerCase())
+  // //   );
+  // // });
 
-  // console.log(result);
+  // // console.log(result);
 };
 
-const depth_first_search: any = () => {
-  // verify neighbors
-};
+// const depth_first_search: any = () => {
+//   // verify neighbors
+// };
 
 // const depth_first_search: any = (
 //   vertices: MapWordToSimilarsIndex,

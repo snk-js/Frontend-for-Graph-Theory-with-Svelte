@@ -1,5 +1,5 @@
-import { WordPair } from "./types";
-import { MapWordToSimilarsIndex } from "./types";
+import type { WordPair } from "./types";
+import type { MapWordToSimilarsIndex } from "./types";
 
 export const flat_dict = (dict: WordPair[]): string[] =>
   dict.flat().map((a) => a.toLocaleLowerCase());

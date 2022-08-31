@@ -1,5 +1,5 @@
 import { describe, it } from "@jest/globals";
-import { first } from "./lib/samples_values";
+import { first } from "$lib/samples_values";
 import { build_connected_graph_structure } from "./lib/nodes";
 import { search_synonym } from "./lib/traverse_graph";
 
