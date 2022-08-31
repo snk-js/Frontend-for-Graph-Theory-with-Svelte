@@ -2,7 +2,8 @@ This is a repository intended for study cases of Graph algorithm problems, utili
 credits to [`Vacuumlabs`](https://vacuumlabs.com/) and his devs
 
 this repo includes (or intended to) animated graphs and actor traversing through them using Svelte as framework.
-this repo also includes many different graph data structure conversion like `edge set` to `adjacency list` and some useful algorithms such as
+
+Also, has many different graph data structure conversion like `edge set` to `adjacency list` and some useful algorithms such as
 `two-edge-connected-graph` assertion given a `adjacency list`
 
 # create-svelte
