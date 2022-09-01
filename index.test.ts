@@ -1,6 +1,6 @@
 import { describe, it } from "@jest/globals";
-import { first } from "$lib/samples_values";
-import { build_connected_graph_structure } from "./lib/nodes";
+import { first } from "./src/lib/samples_values";
+import { build_word_adjency_list } from "./src/lib/adjency_list_from_edge_set";
 import { search_synonym } from "./lib/traverse_graph";
 
 const first_case = first.dictionary;
@@ -23,7 +23,8 @@ describe("link synonyms", () => {
       ["UNdErdoG", "magiC"],
     ];
 
-    const test = build_connected_graph_structure(first_case);
+    const test = build_word_adjency_list(first_case);
+
     const first_sample_case_result = {
       magic: ["watch", "underdog"],
       watch: ["magic", "manager"],
