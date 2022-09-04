@@ -1,17 +1,16 @@
 export class Node {
   id: string;
   index: number;
-  position = {
-    x: (Math.random() * 1000) % 500,
-    y: (Math.random() * 1000) % 500,
+  position: { x: number, y: number } = {
+    x: 0,
+    y: 0,
   };
   visited = false;
   neighbors: number[] = [];
 
-  constructor(id: string, index: number, position: { x: number; y: number }) {
+  constructor(id: string, index: number) {
     this.id = id || "";
     this.index = index;
-    this.position = position;
   }
 
   setPosition(position: { x: number; y: number }) {
@@ -27,5 +26,9 @@ export class Node {
   setVisited(visited: boolean) {
     this.visited = visited;
     return this;
+  }
+
+  getPosition() {
+    return this.position
   }
 }

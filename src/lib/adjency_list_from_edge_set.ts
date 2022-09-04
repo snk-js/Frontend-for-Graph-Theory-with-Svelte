@@ -36,6 +36,14 @@ export const map_named_nodes_to_index = (
     return nodes;
   }, {});
 
+export const map_index_to_node_name = (
+  word_adjency_list: WordAdjencyList
+): MapWordIndexes =>
+  Object.keys(word_adjency_list).reduce((nodes, node, i) => {
+    Object.defineProperty(nodes, i, { value: node, enumerable: true });
+    return nodes;
+  }, {});
+
 const link_nodes_by_index = (
   mapped_nodes: MapWordIndexes,
   word_adj_list: WordAdjencyList
