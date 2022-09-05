@@ -19,7 +19,6 @@
   $: nodes_coords.set($nodes_position[id]);
 </script>
 
-<!-- 
 {#each neighbors as edge, i}
   <Edge
     edge={indexed_ids[edge]}
@@ -27,7 +26,7 @@
     x1={$nodes_coords.x}
     y1={$nodes_coords.y}
   />
-{/each} -->
+{/each}
 
 <circle
   on:mousedown={(e) => onMouseDown(e, id)}

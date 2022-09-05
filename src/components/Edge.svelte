@@ -1,6 +1,6 @@
 <script>
   import { spring } from "svelte/motion";
-  import { onMount } from "svelte/types/runtime/internal/lifecycle";
+  import { onMount } from "svelte";
   import { nodes_position } from "$lib/store";
 
   export let edge;
@@ -19,18 +19,7 @@
     }
   );
 
-  const connect_edges = () => {
-    edges_coords.set({
-      x: $nodes_position[edge].x,
-      y: $nodes_position[edge].y,
-    });
-  };
-
-  onMount(() => {
-    setTimeout(() => {
-      connect_edges();
-    }, 300 * i);
-  });
+  $: edges_coords.set($nodes_position[edge]);
 </script>
 
 <line {x1} {y1} x2={$edges_coords.x} y2={$edges_coords.y} stroke="black" />
