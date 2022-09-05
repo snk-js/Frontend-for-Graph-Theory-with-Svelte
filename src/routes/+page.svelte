@@ -1,53 +1,29 @@
 <script>
   import NodeDraw from "../components/Node.svelte";
   import { onMount } from "svelte";
-  import { Node } from "$lib/models/node";
-  import { node_selection, G } from "$lib/store";
-  import {
-    build_word_adjency_list,
-    map_named_nodes_to_index,
-  } from "$lib/adjency_list_from_edge_set";
-  import { first } from "$lib/samples_values";
+  import { node_selection, nodes_stats, updateNodePosition } from "$lib/store";
 
   $: innerHeight = 0;
   $: innerWidth = 0;
 
-  let nodes;
-
-  const edge_set = first.dictionary;
-
-  const word_adjency_list = build_word_adjency_list(edge_set);
-  const mapped_nodes = map_named_nodes_to_index(word_adjency_list);
-
-  const unsubscribe = G.getNodes().subscribe((newNodes) => {
-    nodes = newNodes;
-  });
-
-  onMount(async () => {
-    Object.entries(mapped_nodes).map(([name, index], i) => {
+  onMount(() => {
+    Object.values($nodes_stats).map((node, i) => {
       setTimeout(() => {
-        G.addNode(
-          new Node(name, index)
-            .addNeighbors(
-              word_adjency_list[name].map((edge) => mapped_nodes[edge])
-            )
-            .setPosition({
-              x:
-                innerWidth / 2 +
-                (((0.5 - Math.random()) * 1000) % (0.4 * innerWidth)),
-              y:
-                innerHeight / 2 +
-                (((0.5 - Math.random()) * 1000) % (0.4 * innerHeight)),
-            })
-        );
-      }, i * 300);
+        updateNodePosition(node.id, {
+          x:
+            innerWidth / 2 +
+            (((0.5 - Math.random()) * 1000) % (0.4 * innerWidth)),
+          y:
+            innerHeight / 2 +
+            (((0.5 - Math.random()) * 1000) % (0.4 * innerHeight)),
+        });
+      }, 100 * i);
     });
   });
 
   function moveNode(e) {
-    console.log(node_selection, mapped_nodes[$node_selection]);
     node_selection &&
-      G.updateNode(mapped_nodes[$node_selection], {
+      updateNodePosition($node_selection, {
         x: e.clientX,
         y: e.clientY,
       });
@@ -63,7 +39,7 @@
 
 <div class="container" on:mousedown={(e) => moveNode(e)}>
   <svg>
-    {#each nodes as node, i}
+    {#each $nodes_stats as node, i}
       <NodeDraw {...node} onMouseDown={nodeSelection} />
     {/each}
   </svg>

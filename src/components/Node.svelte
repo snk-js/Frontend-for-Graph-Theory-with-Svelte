@@ -1,20 +1,24 @@
 <script>
   import { spring } from "svelte/motion";
-  import { node_selection } from "$lib/store";
+  import { node_selection, nodes_position } from "$lib/store";
+  import { tick } from "svelte";
 
   export let id;
   export let onMouseDown;
   export let index;
-  export let position;
   export let neighbors;
 
   let coords = spring(
-    { x: position.x, y: position.y },
+    { x: 0, y: 0 },
     {
       stiffness: 0.02,
       damping: 0.2,
     }
   );
+
+  nodes_position.subscribe(async (newNodesPosition) => {
+    coords.set($nodes_position[id]);
+  });
 </script>
 
 <circle
