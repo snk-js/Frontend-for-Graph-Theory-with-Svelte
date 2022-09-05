@@ -9,7 +9,7 @@ import { first } from "$lib/samples_values";
 const edge_set = first.dictionary;
 
 const word_adjency_list = build_word_adjency_list(edge_set);
-const mapped_nodes = map_named_nodes_to_index(word_adjency_list);
+export const mapped_nodes = map_named_nodes_to_index(word_adjency_list);
 
 
 const nodes_stats_state = Object.entries(mapped_nodes).map(([name, index]) => ({
