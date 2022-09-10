@@ -6,6 +6,8 @@ this repo includes (or intended to) animated graphs and actor traversing through
 Also, has many different graph data structure conversion like `edge set` to `adjacency list` and some useful algorithms such as
 `two-edge-connected-graph` assertion given a `adjacency list`
 
+- [ ] - traverse agent
+
 # create-svelte
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
