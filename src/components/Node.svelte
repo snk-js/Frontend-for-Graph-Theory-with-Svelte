@@ -38,5 +38,6 @@
 <style>
   circle {
     fill: #ff3e00;
+    z-index: 10;
   }
 </style>

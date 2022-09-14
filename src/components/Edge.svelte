@@ -1,6 +1,5 @@
 <script>
   import { spring } from "svelte/motion";
-  import { onMount } from "svelte";
   import { nodes_position } from "$lib/store";
 
   export let edge;
