@@ -1,12 +1,11 @@
-import { describe, it } from "@jest/globals";
-import { first } from "./src/lib/samples_values";
-import { build_word_adjency_list } from "./src/lib/adjency_list_from_edge_set";
-import { search_synonym } from "./lib/traverse_graph";
+import { first } from "../lib/samples_values";
+import { describe, it, expect } from "@jest/globals";
+import { build_word_adjency_list } from "../lib/adjency_list_from_edge_set";
 
 const first_case = first.dictionary;
 const first_query = first.queries;
 
-describe("link synonyms", () => {
+describe("", () => {
   it("should return a dictionary where values are the index from flat dictionary", () => {
     const dict = [
       ["magic", "WaTCH"],
@@ -23,7 +22,7 @@ describe("link synonyms", () => {
       ["UNdErdoG", "magiC"],
     ];
 
-    const test = build_word_adjency_list(first_case);
+    const result = build_word_adjency_list(first_case);
 
     const first_sample_case_result = {
       magic: ["watch", "underdog"],
@@ -38,10 +37,11 @@ describe("link synonyms", () => {
       fake: ["earth"],
     };
 
-    expect(test).toStrictEqual(first_sample_case_result);
+    expect(result).toStrictEqual(first_sample_case_result);
   });
-  it("it should return something", () => {
-    console.log(first_query);
-    console.log(search_synonym(first_case, first_query));
-  });
+
+  // it("it should return something", () => {
+  //   console.log(first_query);
+  //   console.log(search_synonym(first_case, first_query));
+  // });
 });
