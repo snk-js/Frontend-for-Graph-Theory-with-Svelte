@@ -2,24 +2,22 @@ export type WordPair = string[];
 
 export type MapWordIndexes = Record<string, number>;
 
-export type WordAdjencyList = Record<string, [string]>;
-
 export type RecursiveGroupSimilarsReturn =
   | RecursiveGroupSimilars
-  | WordAdjencyList;
+  | StringAdjacencyList;
 
 export type FlatDict = string[];
 
 export type RecursiveGroupSimilarsParams = [
   list_words: string[],
-  memo?: WordAdjencyList,
+  memo?: StringAdjacencyList,
   group?: WordPair[],
   i?: number
 ];
 
 export type RecursiveGroupSimilars = (
   ...args: RecursiveGroupSimilarsParams
-) => WordAdjencyList | RecursiveGroupSimilarsParams;
+) => StringAdjacencyList | RecursiveGroupSimilarsParams;
 
 export type ICase = {
   dictionary: WordPair[];

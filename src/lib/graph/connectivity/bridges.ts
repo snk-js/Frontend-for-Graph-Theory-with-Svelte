@@ -17,7 +17,7 @@ export type Visited = { [vertex: number]: boolean };
 // time complexity: O(V+E)
 // space complexity: O(V)
 
-export const two_edge_connected_graph = (edges: number[][]): boolean => {
+export const strongly_connected_graph = (edges: number[][]): boolean => {
   if (edges.length < 2) return true;
 
   let is_connected = true;
