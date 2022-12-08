@@ -1,5 +1,5 @@
 import type { StringAdjacencyList } from "./types";
-import { map_node_index_by_id } from "../../maps/";
+import { node_index_by_id_MAP } from "../../maps/";
 import type { MapNodeIndexById } from "../../maps";
 import { flat_array_of_edges } from "../../case_specific_utils";
 // edge0: [x0:number, y0: number]
@@ -39,13 +39,17 @@ export const str_adj_list = (
 export const string_adjacency_list = (edges: string[][]): StringAdjacencyList =>
   str_adj_list(flat_array_of_edges(edges));
 
-export const num_adjency_list = (dict: string[][]): number[][] => {
+export const int_adjency_list = (dict: string[][]): number[][] => {
   const word_adj_list = string_adjacency_list(dict);
-  const mapped_nodes = map_node_index_by_id(word_adj_list);
+  const mapped_nodes = node_index_by_id_MAP(word_adj_list);
   return link_nodes_by_index(mapped_nodes, word_adj_list);
 };
 
-const link_nodes_by_index = (
+// these things is like,
+export const link_nodes_by_index = (
+  // Index of 'MapNode - Index -  ById' is the index that
+  // comes from frontend, svelte files property, index
+  // in this case could be a string too
   mapped_nodes: MapNodeIndexById,
   word_adj_list: StringAdjacencyList
 ): number[][] => {
@@ -55,4 +59,4 @@ const link_nodes_by_index = (
 };
 
 export const build_adjacency_list = (edge_set: string[][]): number[][] =>
-  num_adjency_list(edge_set);
+  int_adjency_list(edge_set);

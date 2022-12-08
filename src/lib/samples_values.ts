@@ -1,4 +1,4 @@
-import * as JSONSample from "./example_big/example_big.in.json";
+import * as JSONSample from "../__mock__/big_sample.json";
 
 import type { ITestSample, WordPair } from "./types";
 
