@@ -1,5 +1,4 @@
-This is a repository intended for study cases of Graph algorithm problems, utilizing a real-world one from Vacuumlabs as example.
-credits to [`Vacuumlabs`](https://vacuumlabs.com/) and his devs
+this is a stupidly simple graph visualizer example using svelte framework. Still up to be upgraded. 
 
 this repo includes (or intended to) animated graphs and actor traversing through them using Svelte as framework.
 
