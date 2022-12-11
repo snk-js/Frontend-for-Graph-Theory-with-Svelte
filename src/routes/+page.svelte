@@ -38,27 +38,26 @@
 <svelte:window bind:innerWidth bind:innerHeight />
 
 <div class="container" on:mousedown={(e) => moveNode(e)}>
-  <svg>
-    {#each $nodes_stats as node, i}
-      <NodeDraw {...node} onMouseDown={nodeSelection} />
-    {/each}
-  </svg>
+  {#each $nodes_stats as node, i}
+    <NodeDraw {...node} handleMoveNode={nodeSelection} />
+  {/each}
 </div>
 
 <!-- <svelte:window on:mouseup={onMouseUp} on:mousemove={onMouseMove} /> -->
-<style>
+<style global>
+  body {
+    margin: 0;
+    overflow: hidden;
+    font-family: sans-serif;
+    font-size: 14px;
+  }
   .container {
     width: 100vw;
     height: 100vh;
     max-height: 100vh;
-    background: gainsboro;
+    background: rgb(54, 54, 54);
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  svg {
-    width: 100%;
-    height: 100%;
   }
 </style>

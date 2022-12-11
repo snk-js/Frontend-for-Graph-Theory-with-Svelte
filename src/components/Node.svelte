@@ -1,9 +1,11 @@
 <script>
   import { spring } from "svelte/motion";
   import Edge from "./Edge.svelte";
-  import { node_selection, nodes_position, mapped_nodes } from "$lib/store";
+  import Detail from "./Detail.svelte";
+  import { nodes_position, mapped_nodes } from "$lib/store";
+
   export let id;
-  export let onMouseDown;
+  export let handleMoveNode;
   export let neighbors;
 
   const indexed_ids = Object.keys(mapped_nodes);
@@ -28,16 +30,28 @@
   />
 {/each}
 
-<circle
-  on:mousedown={(e) => onMouseDown(e, id)}
-  cx={$nodes_coords.x}
-  cy={$nodes_coords.y}
-  r={$node_selection === id ? 30 : 10}
-/>
+<div
+  class="point"
+  style="transform: translate({$nodes_coords.x}px,{$nodes_coords.y}px)"
+  on:mousedown={(e) => handleMoveNode(e, id)}
+>
+  <Detail
+    content={{ id, neighbors, x1: $nodes_coords.x, y1: $nodes_coords.y }}
+  />
+</div>
 
 <style>
-  circle {
-    fill: #ff3e00;
-    z-index: 10;
+  .point {
+    z-index: 750;
+    background-color: pink;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px #333;
   }
 </style>
