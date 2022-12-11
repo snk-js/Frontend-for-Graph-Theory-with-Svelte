@@ -9,7 +9,7 @@ const test = [
   ['orbital 1', 'orbital 2'],
 ]
 
-const word_adjency_list = string_adjacency_list(test);
+const word_adjency_list = string_adjacency_list(edge_set);
 export const mapped_nodes: Record<string, number> =
   node_index_by_id_MAP(word_adjency_list);
 

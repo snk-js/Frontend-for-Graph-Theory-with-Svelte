@@ -1,7 +1,6 @@
 <script>
   import { spring } from "svelte/motion";
   import { nodes_position } from "$lib/store";
-  import { onMount } from "svelte";
 
   export let edge;
   export let i;
@@ -22,9 +21,10 @@
   $: edges_coords.set($nodes_position[edge]);
 </script>
 
+<!-- TODO: Refact this ugly thing, use trigonometry sorcery to eliminate ternary operators -->
 <div
-  style="left: {x1}px;
-    top: {y1}px;
+  style="left: {x1 + 15}px;
+    top: {y1 + 15}px;
     transform-origin: top left;
     transform: {x1 - $edges_coords.x > 0 && y1 - $edges_coords.y > 0
     ? 'rotate(180deg)'
@@ -45,8 +45,22 @@
   .edge {
     z-index: 500;
     position: absolute;
-    background: pink;
+    background: transparent;
     opacity: 0.7;
-    border: 2px solid red;
+  }
+
+  .edge::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to top right,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) calc(50% - 0.8px),
+      greenyellow 50%,
+      rgba(0, 0, 0, 0) calc(50% + 0.8px),
+      rgba(0, 0, 0, 0) 100%
+    );
   }
 </style>

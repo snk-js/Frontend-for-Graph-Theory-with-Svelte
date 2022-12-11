@@ -24,14 +24,14 @@
   .value {
     font-weight: 600;
     margin-bottom: 0.5rem;
-    color: rgb(39, 39, 39);
+    color: rgb(81, 215, 112);
     font-size: 0.75rem;
   }
   .name {
     font-size: 0.75rem;
-    font-weight: 900;
+    font-weight: 600;
     margin-bottom: 0.5rem;
-    color: rgb(31, 31, 31);
+    color: rgb(239, 235, 198);
   }
 
   .detail {
