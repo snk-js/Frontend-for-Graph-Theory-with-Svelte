@@ -7,8 +7,8 @@ Also, has many different graph data structure conversion like `edge set` to `adj
 
 roadmap:
 - [x] - setup svelte, minimal mock for nodes and edges
-- [x] - get large data for dummy data in many different cases
-- [x] - algorithms for edgy set serialization 
+- [x] - get large set for dummy data in many different cases
+- [x] - algorithms for edge set serialization 
 - [x] - create better reactivity using states for node position, index and id
 - [x] - draw nodes in the screen in motions
 - [x] - add some cool styles to make it look like a twentieth century app
