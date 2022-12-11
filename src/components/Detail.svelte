@@ -29,7 +29,6 @@
   }
   .name {
     font-size: 0.75rem;
-
     font-weight: 900;
     margin-bottom: 0.5rem;
     color: rgb(31, 31, 31);

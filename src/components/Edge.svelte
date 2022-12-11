@@ -24,11 +24,19 @@
 
 <div
   style="left: {x1}px;
-           top: {y1}px;
-           width: {Math.abs(x1 - $edges_coords.x)}px;
-           height: {Math.abs(y1 - $edges_coords.y)}px;
-           left: 0;
-           top: 0;"
+    top: {y1}px;
+    transform-origin: top left;
+    transform: {x1 - $edges_coords.x > 0 && y1 - $edges_coords.y > 0
+    ? 'rotate(180deg)'
+    : x1 - $edges_coords.x > 0
+    ? 'rotateY(180deg)'
+    : y1 - $edges_coords.y > 0
+    ? 'rotateX(180deg)'
+    : 'none'};
+    width: {Math.abs(x1 - $edges_coords.x)}px;
+    height: {Math.abs(y1 - $edges_coords.y)}px;
+    left: 0;
+    top: 0;"
   class="edge"
 />
 

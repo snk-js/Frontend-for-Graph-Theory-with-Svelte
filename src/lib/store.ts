@@ -5,7 +5,11 @@ import { first } from "$lib/samples_values";
 
 const edge_set = first.dictionary;
 
-const word_adjency_list = string_adjacency_list(edge_set);
+const test = [
+  ['orbital 1', 'orbital 2'],
+]
+
+const word_adjency_list = string_adjacency_list(test);
 export const mapped_nodes: Record<string, number> =
   node_index_by_id_MAP(word_adjency_list);
 
@@ -19,6 +23,7 @@ const nodes_position_by_id = Object.keys(mapped_nodes).reduce(
   (acc, id) => ({ ...acc, [id]: { x: 0, y: 0 } }),
   {}
 );
+
 
 export const nodes_stats = writable(nodes_stats_state);
 
