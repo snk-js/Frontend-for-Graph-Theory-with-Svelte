@@ -25,10 +25,10 @@
     font-weight: 600;
     margin-bottom: 0.5rem;
     color: rgb(81, 215, 112);
-    font-size: 0.75rem;
+    font-size: 0.5rem;
   }
   .name {
-    font-size: 0.75rem;
+    font-size: 0.5rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
     color: rgb(239, 235, 198);
@@ -48,7 +48,7 @@
     left: 20px;
     top: 20px;
     min-width: 3rem;
-    max-width: 200px;
+    max-width: 150px;
     width: fit-content;
 
     overflow: auto;

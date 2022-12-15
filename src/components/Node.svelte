@@ -44,14 +44,14 @@
   .point {
     z-index: 750;
     background-color: pink;
-    width: 20px;
-    height: 20px;
+    width: 0.5rem;
+    height: 0.5rem;
     position: absolute;
-    top: 0px;
-    left: 0px;
-    border: 2px solid #333;
+    top: 9px;
+    left: 9px;
+    border: 2px solid rgb(255, 51, 88);
     border-radius: 50%;
-    background-color: #fff;
-    box-shadow: 0px 0px 10px #333;
+    background-color: rgb(41, 37, 39);
+    box-shadow: 0px 0px 50px 5px rgb(255, 254, 215);
   }
 </style>
