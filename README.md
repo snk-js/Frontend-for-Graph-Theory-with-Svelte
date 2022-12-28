@@ -5,6 +5,9 @@ this repo includes (or intended to) animated graphs and actor traversing through
 Also, has many different graph data structure conversion like `edge set` to `adjacency list` and some useful algorithms such as
 `two-edge-connected-graph` assertion given a `adjacency list`
 
+![localhost_5173 - 15 December 2022](https://user-images.githubusercontent.com/34718184/207974548-eb6db1ea-f912-4257-8751-5d44e96cae22.gif)
+
+
 roadmap:
 - [x] - setup svelte, minimal mock for nodes and edges
 - [x] - get large set for dummy data in many different cases
