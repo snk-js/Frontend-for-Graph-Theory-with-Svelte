@@ -1,5 +1,5 @@
 import type { StringAdjacencyList } from "./types";
-import { node_index_by_id_MAP } from "../../maps/";
+import { index_to_id_hashmap } from "../../maps/";
 import type { MapNodeIndexById } from "../../maps";
 import { flat_array_of_edges } from "../../case_specific_utils";
 // edge0: [x0:number, y0: number]
@@ -41,7 +41,7 @@ export const string_adjacency_list = (edges: string[][]): StringAdjacencyList =>
 
 export const int_adjency_list = (dict: string[][]): number[][] => {
   const word_adj_list = string_adjacency_list(dict);
-  const mapped_nodes = node_index_by_id_MAP(word_adj_list);
+  const mapped_nodes = index_to_id_hashmap(word_adj_list);
   return link_nodes_by_index(mapped_nodes, word_adj_list);
 };
 

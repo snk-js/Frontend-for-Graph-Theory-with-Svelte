@@ -2,7 +2,7 @@ export type WadjList = { [key: string]: string[] };
 export type MapNodeIndexById = { [key: string]: number };
 export type MapNodeIdByIndex = { [key: number]: string };
 
-export const node_index_by_id_MAP = (
+export const index_to_id_hashmap = (
   word_adjency_list: WadjList
 ): MapNodeIndexById =>
   Object.keys(word_adjency_list).reduce((nodes, node, i) => {
@@ -10,7 +10,7 @@ export const node_index_by_id_MAP = (
     return nodes;
   }, {});
 
-export const node_id_by_index_MAP = (
+export const id_to_index_hashmap = (
   word_adjency_list: WadjList
 ): MapNodeIdByIndex =>
   Object.keys(word_adjency_list).reduce((nodes, node, i) => {
