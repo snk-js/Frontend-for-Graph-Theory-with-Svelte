@@ -2,7 +2,7 @@
   import NodeDraw from "../components/Node.svelte";
   import { onMount } from "svelte";
   import { node_selection, nodes_stats, updateNodePosition } from "$lib/store";
-  import Background from "../components/Background.svelte";
+  import Layout from "../components/Layout.svelte";
 
   $: innerHeight = 0;
   $: innerWidth = 0;
@@ -37,13 +37,13 @@
 </script>
 
 <svelte:window bind:innerWidth bind:innerHeight />
-<Background>
+<Layout>
   <div class="container" on:mousedown={(e) => moveNode(e)}>
     {#each $nodes_stats as node, i}
       <NodeDraw {...node} handleMoveNode={nodeSelection} />
     {/each}
   </div>
-</Background>
+</Layout>
 
 <!-- <svelte:window on:mouseup={onMouseUp} on:mousemove={onMouseMove} /> -->
 <style global>
