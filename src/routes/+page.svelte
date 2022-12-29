@@ -1,7 +1,7 @@
 <script>
   import NodeDraw from "../components/Node.svelte";
   import { onMount } from "svelte";
-  import { node_selection, nodes_stats, updateNodePosition } from "$lib/store";
+  import { node_selection, nodes_stats, updateNodePosition } from "$lib/store/nodes";
   import Layout from "../components/Layout.svelte";
 
   $: innerHeight = 0;

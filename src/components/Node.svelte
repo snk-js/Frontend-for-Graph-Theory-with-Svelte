@@ -2,7 +2,7 @@
   import { spring } from "svelte/motion";
   import Edge from "./Edge.svelte";
   import Detail from "./Detail.svelte";
-  import { nodes_position, mapped_nodes } from "$lib/store";
+  import { nodes_position, mapped_nodes } from "$lib/store/nodes";
 
   export let id;
   export let handleMoveNode;

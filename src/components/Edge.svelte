@@ -1,6 +1,6 @@
 <script>
   import { spring } from "svelte/motion";
-  import { nodes_position } from "$lib/store";
+  import { nodes_position } from "$lib/store/nodes";
 
   export let edge;
   export let i;

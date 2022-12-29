@@ -5,14 +5,12 @@
 </script>
 
 <div >
-  <Background class='layout'>
+  <Background>
     <Menu />
     <slot />
   </Background>
 </div>
 
 <style>
-  .layout {
-    z-index: 2000;
-  }
+
 </style>
