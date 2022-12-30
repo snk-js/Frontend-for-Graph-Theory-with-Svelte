@@ -1,12 +1,17 @@
 <script>
   import BackgroundIcon from "svelte-icons/md/MdBlurOn.svelte";
-  import ButtonBase from "../../common/button-base.svelte";
+  import ButtonBase from "@commons/button-base.svelte";
 </script>
 
 <div class="menu">
   <div class="main-panel">
     <div class="panel-row">
-      <ButtonBase popover={{ labels_id: "m-bg-settings" }}>
+      <ButtonBase
+        popover={{
+          labels_id: "bg-menu-labels",
+          components_id: "m-bg-components",
+        }}
+      >
         <BackgroundIcon />
       </ButtonBase>
     </div>

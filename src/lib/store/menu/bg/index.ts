@@ -1,17 +1,89 @@
 import { writable } from "svelte/store";
+import type { ListItemProp } from "@commons/list-item/types";
 
- 
-export const bg_init_state = {
-    //background
-    color: 'rgb(27, 27, 27)',
-    bg_pos_ver: '-19px',
-    bg_pos_hor: '-19px',
-    //unit square
-    size: '50px',
-    //point style
-    pt_color: 'rgba(255, 255, 255, 0.537) 1px',
-    pt_len: '1px',
+
+export type BgMenu = {
+    [key: string]: ListItemProp
 }
 
-export const background = writable(bg_init_state)
+const color: ListItemProp = {
+  label: "color",
+  state: "rgb(27, 27, 27)",
+  component: {
+    type: "color",
+  },
+};
+const bg_pos_ver: ListItemProp = {
+  label: "vertical position",
+  state: "-19px",
+  component: {
+    type: "slide",
+    settings: {
+      from: -50,
+      to: 50,
+      default: 19,
+      pace: 1,
+    },
+  },
+};
 
+const bg_pos_hor: ListItemProp = {
+  label: "horizontal position",
+  state: "-19px",
+  component: {
+    type: "slide",
+    settings: {
+      from: -50,
+      to: 50,
+      default: 19,
+      pace: 1,
+    },
+  },
+};
+const unit_square_size: ListItemProp = {
+  state: "50px",
+  label: "size",
+  component: {
+    type: "slide",
+    settings: {
+      from: -100,
+      to: 100,
+      default: 50,
+      pace: 1,
+    },
+  },
+};
+const pt_color: ListItemProp = {
+  label: "point color",
+  state: "rgba(255, 255, 255, 0.537)",
+  component: {
+    type: "color",
+  },
+};
+const pt_len: ListItemProp = {
+  label: "point length",
+  state: "1px",
+  component: {
+    type: "slider",
+    settings: {
+      from: 0,
+      to: 10,
+      pace: 0.2,
+      default: 1,
+    },
+  },
+};
+
+export const bg_menu_list_items: BgMenu = {
+  //background
+  bg_pos_ver,
+  color,
+  bg_pos_hor,
+  //unit square
+  unit_square_size,
+  //point style
+  pt_color,
+  pt_len
+};
+
+export const menu_background_state = writable(bg_menu_list_items);

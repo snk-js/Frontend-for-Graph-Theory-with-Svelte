@@ -9,6 +9,11 @@ const config = {
 
   kit: {
     adapter: adapter(),
+    alias: {
+      '@commons': 'src/components/common',
+      '@uncommons': 'src/components/uncommon',
+      '@epics': 'src/components/epic',
+    }
   },
 };
 
