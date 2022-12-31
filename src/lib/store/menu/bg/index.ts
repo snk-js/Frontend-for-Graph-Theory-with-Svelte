@@ -17,7 +17,7 @@ const bg_pos_ver: ListItemProp = {
   label: "vertical position",
   state: "-19px",
   component: {
-    type: "slide",
+    type: "slider",
     settings: {
       from: -50,
       to: 50,
@@ -31,7 +31,7 @@ const bg_pos_hor: ListItemProp = {
   label: "horizontal position",
   state: "-19px",
   component: {
-    type: "slide",
+    type: "slider",
     settings: {
       from: -50,
       to: 50,
@@ -44,7 +44,7 @@ const unit_square_size: ListItemProp = {
   state: "50px",
   label: "size",
   component: {
-    type: "slide",
+    type: "slider",
     settings: {
       from: -100,
       to: 100,

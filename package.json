@@ -30,6 +30,7 @@
   },
   "type": "module",
   "dependencies": {
+    "svelte-awesome-color-picker": "^2.2.2",
     "svelte-icons": "^2.1.0"
   }
 }

@@ -13,6 +13,7 @@ const config = {
       '@commons': 'src/components/common',
       '@uncommons': 'src/components/uncommon',
       '@epics': 'src/components/epic',
+      '@components':'src/components/'
     }
   },
 };

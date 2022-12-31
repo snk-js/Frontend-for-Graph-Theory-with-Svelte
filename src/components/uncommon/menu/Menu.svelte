@@ -9,7 +9,8 @@
       <ButtonBase
         popover={{
           labels_id: "bg-menu-labels",
-          components_id: "m-bg-components",
+          components_id: "bg-menu-components",
+          ids: "bg-menu-ids",
         }}
       >
         <BackgroundIcon />
