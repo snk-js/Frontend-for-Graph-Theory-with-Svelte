@@ -13,27 +13,27 @@ roadmap:
 ### begin:
 - [x] - setup svelte, minimal mock for nodes and edges
 - [x] - collect dummy data and verificability for many diffirent graph types:"
-- [x] undirected graph;
-- [ ] directed graph;
-- [ ] weighted graph;
-- [ ] complete graph;
-- [ ] bipartite graph;
-- [ ] three;
-uncommon graph types:
-- [ ] planar graph;
-- [ ] multigraph;
-- [ ] pseudo graph;
-- [ ] multiple connected components graph;
-- [ ] graph with loops;
-
-tasks:
+* undirected graph;
+* directed graph;
+* weighted graph;
+* complete graph;
+* bipartite graph;
+* three;
 - [x] - create basic algorithms for edge set to adjacency list conversions; 
 - [x] - create better reactivity using states for node position, index and id
 - [x] - draw nodes in the screen using motions
 - [x] - add some cool styles to make it look like a twentieth century app
+- [ ] - make minimal scabalable menu to hold configuration and settings of the many entities app will have
 - [ ] - add Sugiyama layout algorithm on drawing planar graphs.
 - [ ] - apply planar graph drawing
 - [ ] - animate agent traversal
+
+uncommon graph types:
+* planar graph;
+* multigraph;
+* pseudo graph;
+* multiple connected components graph;
+* graph with loops;
 
 optional:
 - [ ] - add support for coloring areas
