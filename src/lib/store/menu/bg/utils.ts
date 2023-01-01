@@ -1,4 +1,4 @@
-import type {BackgroundState} from '@epics/background/types'
+import type {BackgroundState} from '@rares/background/types'
 import type { BgMenu } from '$lib/store/menu/bg'
 import type { Component } from '@components/index'
 

@@ -1,7 +1,7 @@
 <script>
   import { fade } from "svelte/transition";
   import Mix from "@commons/mix/mix.svelte";
-  import { onMount } from "svelte";
+
   export let label = "";
   export let component = { type: "" };
   export let i = 0;
@@ -20,22 +20,27 @@
 <style>
   .list-item {
     display: flex;
-    min-width: 160px;
+    min-width: 200px;
     margin: 0.2rem;
+  }
+
+  .list-item:hover {
+    transform: scale(105%);
+    background: rgba(62, 62, 62, 0.285);
   }
 
   .label {
     font-size: 0.575rem;
-    font-weight: 600;
     box-sizing: border-box;
     padding: 0.24rem;
     min-width: 100px;
   }
   .component {
-    background-color: rgba(38, 38, 38, 0.634);
+    background-color: rgba(38, 38, 38, 0.066);
     width: 100%;
     max-width: 100px;
     margin: 0 0 0 auto;
     min-width: auto;
+    display: flex;
   }
 </style>

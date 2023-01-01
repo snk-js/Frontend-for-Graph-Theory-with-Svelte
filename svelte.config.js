@@ -12,7 +12,7 @@ const config = {
     alias: {
       '@commons': 'src/components/common',
       '@uncommons': 'src/components/uncommon',
-      '@epics': 'src/components/epic',
+      '@rares': 'src/components/rare',
       '@components':'src/components/'
     }
   },

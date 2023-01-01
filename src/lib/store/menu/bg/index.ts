@@ -1,7 +1,6 @@
 import { writable } from "svelte/store";
 import type { ListItemProp } from "@commons/list-item/types";
 
-
 export type BgMenu = {
     [key: string]: ListItemProp
 }
@@ -87,3 +86,13 @@ export const bg_menu_list_items: BgMenu = {
 };
 
 export const menu_background_state = writable(bg_menu_list_items);
+
+export const set_menu_state = (id:string, value: string) => {
+  menu_background_state.update((state) => 
+    ({...state,
+    [id]: {
+      ...state[id],
+      state: value
+    }})
+  )
+}

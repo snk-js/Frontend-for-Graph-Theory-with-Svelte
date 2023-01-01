@@ -1,5 +1,5 @@
 <script>
-  import Background from "@epics/background/Background.svelte";
+  import Background from "@rares/background/Background.svelte";
   import Menu from "@uncommons/menu/Menu.svelte";
 </script>
 

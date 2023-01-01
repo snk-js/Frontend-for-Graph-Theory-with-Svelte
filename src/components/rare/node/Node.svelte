@@ -1,7 +1,7 @@
 <script>
   import { spring } from "svelte/motion";
-  import Edge from "@epics/edge/Edge.svelte";
-  import Detail from "@epics/detail/Detail.svelte";
+  import Edge from "@rares/edge/Edge.svelte";
+  import Detail from "@rares/detail/Detail.svelte";
   import { nodes_position, mapped_nodes } from "$lib/store/nodes";
 
   export let id;

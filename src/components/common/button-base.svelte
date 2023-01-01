@@ -8,8 +8,8 @@
 
   let show_menu = false;
 
-  function handle_menu_popover(state) {
-    show_menu = state;
+  function handle_menu_popover() {
+    show_menu = !show_menu;
   }
 </script>
 
@@ -21,10 +21,8 @@
   </div>
   <button
     class="button-base"
-    style="--color-icon:rgb(65, 163, 61)"
-    on:mouseover={() => handle_menu_popover(true)}
-    on:focus={() => handle_menu_popover(true)}
-    on:mouseleave={() => handle_menu_popover(false)}
+    style="--color-icon:rgb(2, 100, 300, 1)"
+    on:click={handle_menu_popover}
   >
     <slot />
   </button>
@@ -35,6 +33,7 @@
     height: 100%;
   }
   .anchor {
+    z-index: 2000;
     width: 0;
     height: 0;
     position: relative;

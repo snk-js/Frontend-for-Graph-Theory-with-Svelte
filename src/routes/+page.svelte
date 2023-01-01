@@ -1,12 +1,12 @@
 <script>
-  import NodeDraw from "@epics/node/Node.svelte";
+  import NodeDraw from "@rares/node/Node.svelte";
   import { onMount } from "svelte";
   import {
     node_selection,
     nodes_stats,
     updateNodePosition,
   } from "$lib/store/nodes";
-  import Layout from "@epics/layout/Layout.svelte";
+  import Layout from "@rares/layout/Layout.svelte";
 
   $: innerHeight = 0;
   $: innerWidth = 0;
