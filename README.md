@@ -13,19 +13,20 @@ roadmap:
 ### begin:
 - [x] - setup svelte, minimal mock for nodes and edges
 - [x] - collect dummy data and verificability for many diffirent graph types:"
-- [x] * undirected graph;
-- [ ] * directed graph;
-- [ ] * weighted graph;
-- [ ] * complete graph;
-- [ ] * bipartite graph;
-- [ ] * three;
-#### uncommon graph types
-- [ ] * planar graph;
-- [ ] * multigraph;
-- [ ] * pseudo graph;
-- [ ] * multiple connected components graph;
-- [ ] * graph with loops;
-      
+- [x] undirected graph;
+- [ ] directed graph;
+- [ ] weighted graph;
+- [ ] complete graph;
+- [ ] bipartite graph;
+- [ ] three;
+uncommon graph types:
+- [ ] planar graph;
+- [ ] multigraph;
+- [ ] pseudo graph;
+- [ ] multiple connected components graph;
+- [ ] graph with loops;
+
+tasks:
 - [x] - create basic algorithms for edge set to adjacency list conversions; 
 - [x] - create better reactivity using states for node position, index and id
 - [x] - draw nodes in the screen using motions
@@ -33,7 +34,8 @@ roadmap:
 - [ ] - add Sugiyama layout algorithm on drawing planar graphs.
 - [ ] - apply planar graph drawing
 - [ ] - animate agent traversal
-### optional:
+
+optional:
 - [ ] - add support for coloring areas
 - [ ] - try to draw some cool stuff  
 - [ ] - TODO: find an good algorithm to transform non-planar into planar
