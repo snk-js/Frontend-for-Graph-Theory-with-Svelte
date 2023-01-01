@@ -59,10 +59,34 @@ yarn dev
 ```
 
 
-# Graph draw
+# Graph (incremental documentation)
 
-## layouts:
+## types of graph:
+In graph theory, there are many different types of graphs because different types of graphs are suited to different types of problems and applications.
 
+For example, some graphs are better suited to representing networks, such as social networks or computer networks. These graphs often have a large number of nodes and edges, and may have a grid-like or hierarchical structure. Orthogonal layout algorithms are often used to draw these graphs, as they can handle the large number of nodes and edges and can produce clear, easy-to-read layouts.
+
+Other graphs are better suited to representing relationships between objects or entities. These graphs may have a smaller number of nodes and edges, and may have a tree-like or circular structure. Circular layout algorithms or hierarchical layout algorithms are often used to draw these graphs, as they can highlight the relationships between the nodes.
+
+Here is a table showing which types of graphs can belong to each other
+
+| Undirected         | Directed | Weighted | Complete | Bipartite | Tree | Multi-graph | Pseudo-graph | Planar | Loops | Multiple connected components |
+|--------------------|----------|----------|----------|-----------|------|-------------|--------------|--------|-------|-------------------------------|
+| Undirected         | Yes      | No       | Yes      | Yes       | Yes  | Yes         | Yes          | No     | Yes   | Yes                           | Yes |
+| Directed           | No       | Yes      | Yes      | No        | Yes  | No          | No           | Yes    | Yes   | Yes                           | Yes |
+| Weighted           | Yes      | Yes      | Yes      | No        | Yes  | Yes         | Yes          | Yes    | Yes   | Yes                           | Yes |
+| Complete           | Yes      | No       | No       | Yes       | No   | No          | Yes          | No     | Yes   | Yes                           | Yes |
+| Bipartite          | Yes      | Yes      | Yes      | No        | Yes  | Yes         | Yes          | Yes    | Yes   | Yes                           | Yes |
+| Tree               | Yes      | No       | Yes      | No        | Yes  | Yes         | No           | No     | Yes   | No                            | Yes |
+| Multi-graph        | Yes      | No       | Yes      | Yes       | Yes  | No          | Yes          | No     | Yes   | Yes                           | Yes |
+| Pseudo-graph       | No       | Yes      | Yes      | No        | Yes  | No          | No           | Yes    | Yes   | Yes                           | Yes |
+| Planar             | Yes      | Yes      | Yes      | Yes       | Yes  | Yes         | Yes          | Yes    | Yes   | Yes                           | Yes |
+| Loops              | Yes      | Yes      | Yes      | Yes       | Yes  | No          | Yes          | Yes    | Yes   | Yes                           | Yes |
+| Multiple connected | Yes      | Yes      | Yes      | Yes       | Yes  | Yes         | Yes          | Yes    | Yes   | Yes                           | Yes |
+
+## graph drawing
+
+### layouts:
 There are many different graph layout algorithms that can be used to arrange the nodes and edges of a graph in a visually appealing way. Here are a few examples of common graph layout algorithms:
 
 * Force-directed layout: This type of layout algorithm works by simulating the forces acting on the nodes of the graph, such as spring forces or gravitational forces, and using these forces to determine the final positions of the nodes. Examples of force-directed layout algorithms include the Fruchterman-Reingold algorithm and the Kamada-Kawai algorithm.
@@ -74,3 +98,12 @@ There are many different graph layout algorithms that can be used to arrange the
 * Orthogonal layout: This type of layout algorithm arranges the nodes of the graph in a grid-like shape, with the edges connecting the nodes drawn as straight lines. Orthogonal layout algorithms are often used for graphs that have a grid-like structure or that represent networks.
 
 * Sugiyama layout: This type of layout algorithm is specifically designed for drawing planar graphs (graphs that can be drawn on a plane without any of the edges crossing). The Sugiyama layout algorithm is a multi-step algorithm that assigns nodes to layers, minimizes the number of edge crossings, and assigns horizontal and vertical coordinates to the nodes.
+
+### and if the graph is not planar?
+There are several algorithms for drawing non-planar graphs (graphs that cannot be drawn on a plane without any of the edges crossing). These algorithms generally work by adding "dummy" edges or vertices to the graph to make it planar, and then using a planar graph layout algorithm to draw the resulting planar graph.
+
+One such algorithm is the Kuratowski's theorem algorithm, which works by adding dummy edges to the graph until it becomes planar, and then using a planar graph layout algorithm to draw the resulting planar graph. Kuratowski's theorem states that a graph is non-planar if and only if it contains a subgraph that is isomorphic to one of two specific graphs: the complete graph K5, or the complete bipartite graph K3,3.
+
+Another algorithm for drawing non-planar graphs is the topological embedding algorithm, which works by adding dummy vertices to the graph to make it planar, and then using a planar graph layout algorithm to draw the resulting planar graph.
+
+There are also many other algorithms for drawing non-planar graphs, including the visibility layout algorithm, the orthogonal layout algorithm, and the circular layout algorithm. Each of these algorithms has its own set of advantages and disadvantages, and the best algorithm to use will depend on the specific needs of the graph being drawn.
