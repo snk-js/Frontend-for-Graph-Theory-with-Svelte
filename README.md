@@ -57,3 +57,20 @@ start app:
 ```
 yarn dev
 ```
+
+
+# Graph draw
+
+## layouts:
+
+There are many different graph layout algorithms that can be used to arrange the nodes and edges of a graph in a visually appealing way. Here are a few examples of common graph layout algorithms:
+
+* Force-directed layout: This type of layout algorithm works by simulating the forces acting on the nodes of the graph, such as spring forces or gravitational forces, and using these forces to determine the final positions of the nodes. Examples of force-directed layout algorithms include the Fruchterman-Reingold algorithm and the Kamada-Kawai algorithm.
+
+* Circular layout: This type of layout algorithm arranges the nodes of the graph in a circular shape, with the edges connecting the nodes forming radii. Circular layout algorithms are often used for graphs that have a hierarchical or tree-like structure.
+
+* Hierarchical layout: This type of layout algorithm is often used for graphs that have a tree-like or hierarchical structure, and arranges the nodes in a tree-like shape with the parent nodes positioned above their children.
+
+* Orthogonal layout: This type of layout algorithm arranges the nodes of the graph in a grid-like shape, with the edges connecting the nodes drawn as straight lines. Orthogonal layout algorithms are often used for graphs that have a grid-like structure or that represent networks.
+
+* Sugiyama layout: This type of layout algorithm is specifically designed for drawing planar graphs (graphs that can be drawn on a plane without any of the edges crossing). The Sugiyama layout algorithm is a multi-step algorithm that assigns nodes to layers, minimizes the number of edge crossings, and assigns horizontal and vertical coordinates to the nodes.
