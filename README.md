@@ -29,6 +29,13 @@ roadmap:
 
 how to init the app:
 
+!you must have node 16+ and yarn (or npm)
+
+fetch deps:
+```
+yarn
+```
+start app:
 ```
 yarn dev
 ```
