@@ -13,18 +13,18 @@ roadmap:
 ### begin:
 - [x] - setup svelte, minimal mock for nodes and edges
 - [x] - collect dummy data and verificability for many diffirent graph types:"
-      - [x] undirected graph;
-      - [ ] directed graph;
-      - [ ] weighted graph;
-      - [ ] complete graph;
-      - [ ] bipartite graph;
-      - [ ] three;
-      #### uncommon graph types
-      - [ ] planar graph;
-      - [ ] multigraph;
-      - [ ] pseudo graph;
-      - [ ] multiple connected components graph;
-      - [ ] graph with loops;
+- [x] * undirected graph;
+- [ ] * directed graph;
+- [ ] * weighted graph;
+- [ ] * complete graph;
+- [ ] * bipartite graph;
+- [ ] * three;
+#### uncommon graph types
+- [ ] * planar graph;
+- [ ] * multigraph;
+- [ ] * pseudo graph;
+- [ ] * multiple connected components graph;
+- [ ] * graph with loops;
       
 - [x] - create basic algorithms for edge set to adjacency list conversions; 
 - [x] - create better reactivity using states for node position, index and id
