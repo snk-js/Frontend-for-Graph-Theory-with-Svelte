@@ -46,9 +46,8 @@ optional:
 - [ ] - TODO: search features for clustering
 - [ ] - ... ?
 
-how to init the app:
-
-!you must have node 16+ and yarn (or npm)
+### Initialize the app:
+you should have node 16+ and yarn (or npm)
 
 fetch deps:
 ```
