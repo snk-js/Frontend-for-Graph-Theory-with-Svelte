@@ -10,21 +10,38 @@ The ultimate goal of this app is to create a fully dynamic and customizable plat
 
 
 roadmap:
+### begin:
 - [x] - setup svelte, minimal mock for nodes and edges
-- [x] - get large set for dummy data in many different cases
-- [x] - algorithms for edge set serialization 
+- [x] - collect dummy data and verificability for many diffirent graph types:"
+      - [x] undirected graph;
+      - [ ] directed graph;
+      - [ ] weighted graph;
+      - [ ] complete graph;
+      - [ ] bipartite graph;
+      - [ ] three;
+      #### uncommon graph types
+      - [ ] planar graph;
+      - [ ] multigraph;
+      - [ ] pseudo graph;
+      - [ ] multiple connected components graph;
+      - [ ] graph with loops;
+      
+- [x] - create basic algorithms for edge set to adjacency list conversions; 
 - [x] - create better reactivity using states for node position, index and id
-- [x] - draw nodes in the screen in motions
+- [x] - draw nodes in the screen using motions
 - [x] - add some cool styles to make it look like a twentieth century app
-- [ ] - use mathematical sorcery to draw as planar graph
-- [ ] - try to draw some cool stuff  
+- [ ] - add Sugiyama layout algorithm on drawing planar graphs.
+- [ ] - apply planar graph drawing
 - [ ] - animate agent traversal
+### optional:
+- [ ] - add support for coloring areas
+- [ ] - try to draw some cool stuff  
+- [ ] - TODO: find an good algorithm to transform non-planar into planar
 - [ ] - add cool transitions to edge and node
 - [ ] - test visualization for connectivity and bridges
 - [ ] - apply strongly connected components (SCC) algorithm 
-- [ ] - add input option panels 
-- [ ] - try test this thing for big data visualization
-- [ ] - features for clustering
+- [ ] - TODO: search strategy for big data visualization
+- [ ] - TODO: search features for clustering
 - [ ] - ... ?
 
 how to init the app:
