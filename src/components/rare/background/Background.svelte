@@ -7,6 +7,19 @@
   menu_background_state.subscribe((state) => {
     bg_state = state_by_id_map(state);
   });
+
+  let x = 0;
+  let y = 0;
+  let scale = 1;
+
+  function handleMouseMove(event) {
+    x += event.movementX;
+    y += event.movementY;
+  }
+
+  function handleMouseWheel(event) {
+    scale += event.deltaY * 0.01;
+  }
 </script>
 
 <div

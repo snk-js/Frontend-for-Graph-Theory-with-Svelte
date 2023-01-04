@@ -38,7 +38,6 @@
   .component {
     background-color: rgba(38, 38, 38, 0.066);
     width: 100%;
-    max-width: 100px;
     margin: 0 0 0 auto;
     min-width: auto;
     display: flex;

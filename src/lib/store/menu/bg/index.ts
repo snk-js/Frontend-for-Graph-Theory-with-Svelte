@@ -18,10 +18,10 @@ const bg_pos_ver: ListItemProp = {
   component: {
     type: "slider",
     settings: {
-      from: -50,
-      to: 50,
-      default: 19,
-      pace: 1,
+      min: -50,
+      max: 50,
+      step: 19,
+      value: 1,
     },
   },
 };
@@ -32,10 +32,10 @@ const bg_pos_hor: ListItemProp = {
   component: {
     type: "slider",
     settings: {
-      from: -50,
-      to: 50,
-      default: 19,
-      pace: 1,
+      min: -50,
+      max: 50,
+      step: 19,
+      value: 1,
     },
   },
 };
@@ -45,10 +45,10 @@ const unit_square_size: ListItemProp = {
   component: {
     type: "slider",
     settings: {
-      from: -100,
-      to: 100,
-      default: 50,
-      pace: 1,
+      min: -100,
+      max: 100,
+      step: 50,
+      value: 1,
     },
   },
 };
@@ -65,10 +65,10 @@ const pt_len: ListItemProp = {
   component: {
     type: "slider",
     settings: {
-      from: 0,
-      to: 10,
-      pace: 0.2,
-      default: 1,
+      min: 0,
+      max: 10,
+      step: 0.2,
+      value: 1,
     },
   },
 };

@@ -1,6 +1,7 @@
 <script>
   import Color from "@commons/color/color.svelte";
   import Slider from "@commons/slider/slider.svelte";
+
   export let id = "";
   export let component = { type: "" };
 
