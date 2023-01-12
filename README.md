@@ -92,15 +92,45 @@ Here is a table showing which types of graphs can belong to each other
 ### layouts:
 There are many different graph layout algorithms that can be used to arrange the nodes and edges of a graph in a visually appealing way. Here are a few examples of common graph layout algorithms:
 
-* Force-directed layout: This type of layout algorithm works by simulating the forces acting on the nodes of the graph, such as spring forces or gravitational forces, and using these forces to determine the final positions of the nodes. Examples of force-directed layout algorithms include the Fruchterman-Reingold algorithm and the Kamada-Kawai algorithm.
+<ul>
+  <li>
+    <strong> Force-directed layout: </strong>
+    This type of layout algorithm works by simulating the forces acting on the nodes
+    of the graph, such as spring forces or gravitational forces, and using these
+    forces to determine the final positions of the nodes. Examples of force-directed
+    layout algorithms include the Fruchterman-Reingold algorithm and the Kamada-Kawai
+    algorithm.
+    <ul><li><a href="https://en.wikipedia.org/wiki/Force-directed_graph_drawing#Fruchterman-Reingold" target="_new">Fruchterman-Reingold</a> - One of the simplest and most widely-used force-directed graph layout algorithm. It models nodes as repulsing each other, and edges as attracting their connected nodes.</li><li><a href="https://en.wikipedia.org/wiki/Force-directed_graph_drawing#Kamada-Kawai" target="_new">Kamada-Kawai</a> - an extension of the Fruchterman-Reingold algorithm that takes into account the geometric distance between nodes. It uses a nonlinear optimization technique to compute the node positions</li><li><a href="https://en.wikipedia.org/wiki/Force-directed_graph_drawing#Davidson-Harel" target="_new">Davidson-Harel</a> - An extension of the Fruchterman-Reingold algorithm that uses a multi-level approach to handle large graphs</li><li><a href="https://en.wikipedia.org/wiki/Force-directed_graph_drawing#Lin-Kernighan" target="_new">Lin-Kernighan</a> - Another optimization-based algorithm that is known for its performance on large graphs</li><li><a href="https://en.wikipedia.org/wiki/ForceAtlas2" target="_new">ForceAtlas2</a> - An extension of the Fruchterman-Reingold algorithm that improves the stability and quality of the resulting layout</li><li><a href="https://en.wikipedia.org/wiki/Stress_majorization" target="_new">Stochastic Stress Majorization</a> - Algorithm that uses a randomization process to minimize the stress function</li><li><a href="https://en.wikipedia.org/wiki/Multidimensional_scaling" target="_new">Multi-dimensional Scaling</a> - A technique that maps the graph to a lower-dimensional space while preserving the relative distances between nodes</li><li><a href="https://en.wikipedia.org/wiki/Force-directed_graph_drawing#Scale-free_force-directed_algorithms" target="_new">Scale-free (non-Uniform force-directed)</a> - force-directed layout algorithms that use different force strength depending on the degree of each node.</li></ul>
+  </li>
+  <li>
+    <strong> Circular layout: </strong>
+    This type of layout algorithm arranges the nodes of the graph in a circular shape,
+    with the edges connecting the nodes forming radii. Circular layout algorithms
+    are often used for graphs that have a hierarchical or tree-like structure.
+  </li>
+  <li>
+    <strong> Hierarchical layout: </strong>
+    This type of layout algorithm is often used for graphs that have a tree-like
+    or hierarchical structure, and arranges the nodes in a tree-like shape with the
+    parent nodes positioned above their children.
+  </li>
+  <li>
+    <strong> Orthogonal layout: </strong>
+    This type of layout algorithm arranges the nodes of the graph in a grid-like
+    shape, with the edges connecting the nodes drawn as straight lines. Orthogonal
+    layout algorithms are often used for graphs that have a grid-like structure or
+    that represent networks.
+  </li>
+  <li>
+    <strong> Sugiyama layout: </strong>
+    This type of layout algorithm is specifically designed for drawing planar graphs
+    (graphs that can be drawn on a plane without any of the edges crossing). The
+    Sugiyama layout algorithm is a multi-step algorithm that assigns nodes to layers,
+    minimizes the number of edge crossings, and assigns horizontal and vertical coordinates
+    to the nodes.
+  </li>
+</ul>
 
-* Circular layout: This type of layout algorithm arranges the nodes of the graph in a circular shape, with the edges connecting the nodes forming radii. Circular layout algorithms are often used for graphs that have a hierarchical or tree-like structure.
-
-* Hierarchical layout: This type of layout algorithm is often used for graphs that have a tree-like or hierarchical structure, and arranges the nodes in a tree-like shape with the parent nodes positioned above their children.
-
-* Orthogonal layout: This type of layout algorithm arranges the nodes of the graph in a grid-like shape, with the edges connecting the nodes drawn as straight lines. Orthogonal layout algorithms are often used for graphs that have a grid-like structure or that represent networks.
-
-* Sugiyama layout: This type of layout algorithm is specifically designed for drawing planar graphs (graphs that can be drawn on a plane without any of the edges crossing). The Sugiyama layout algorithm is a multi-step algorithm that assigns nodes to layers, minimizes the number of edge crossings, and assigns horizontal and vertical coordinates to the nodes.
 
 ### and if the graph is not planar?
 There are several algorithms for drawing non-planar graphs (graphs that cannot be drawn on a plane without any of the edges crossing). These algorithms generally work by adding "dummy" edges or vertices to the graph to make it planar, and then using a planar graph layout algorithm to draw the resulting planar graph.
